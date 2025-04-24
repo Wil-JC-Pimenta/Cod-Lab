@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 250 95% 76%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 250 95% 76%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  .code-editor {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Difficulty badges */
+.badge-easy {
+  @apply bg-green-600 text-white;
+}
+
+.badge-medium {
+  @apply bg-yellow-600 text-white;
+}
+
+.badge-hard {
+  @apply bg-red-600 text-white;
+}
+
+.tag {
+  @apply bg-accent text-foreground text-xs px-2 py-1 rounded-md mr-1 mb-1 inline-block;
+}
+
+.challenge-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1;
+}
+
+code {
+  @apply bg-muted px-1 py-0.5 rounded text-sm;
+}
+
+pre {
+  @apply bg-muted p-4 rounded-lg my-4 overflow-x-auto;
+}
