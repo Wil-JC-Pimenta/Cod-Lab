@@ -73,52 +73,74 @@ console.log(resultado); // Saída: [1, 2, "Fizz", 4, "Buzz"]
     id: "is-prime",
     name: "Verificador de Número Primo",
     description:
-      "Crie uma função que verifica se um número é primo. Um número primo é maior que 1 e possui apenas dois divisores: 1 e ele mesmo.",
+      "Crie uma função que verifica se um número é primo. Um número primo é aquele que só é divisível por 1 e por ele mesmo.",
     difficulty: "medium",
-    tags: ["matemática", "lógica"],
+    tags: ["matemática", "números primos", "otimização"],
     examples: [
       {
         input: "11",
         output: "true",
-        explanation:
-          "11 é divisível apenas por 1 e por ele mesmo, então é primo."
-      },
-      {
-        input: "4",
-        output: "false",
-        explanation: "4 é divisível por 1, 2 e 4, então não é primo."
+        explanation: "11 é primo pois só é divisível por 1 e por 11."
       }
     ],
     boilerplate: `function isPrime(n: number): boolean {
   // Seu código aqui
   
 }`,
-    solution: `function isPrime(n: number): boolean {
-  if (n <= 1) return false;
-  if (n <= 3) return true;
+    solution: `function verificarPrimo(numero) {
+  console.log("Entrada:", numero);
   
-  if (n % 2 === 0 || n % 3 === 0) return false;
-  
-  for (let i = 5; i * i <= n; i += 6) {
-    if (n % i === 0 || n % (i + 2) === 0) return false;
+  if (numero <= 1) {
+    console.log("Saída: false (números menores ou iguais a 1 não são primos)");
+    return false;
   }
   
+  if (numero <= 3) {
+    console.log("Saída: true (2 e 3 são primos)");
+    return true;
+  }
+  
+  if (numero % 2 === 0 || numero % 3 === 0) {
+    console.log("Saída: false (divisível por 2 ou 3)");
+    return false;
+  }
+  
+  for (let i = 5; i * i <= numero; i += 6) {
+    if (numero % i === 0 || numero % (i + 2) === 0) {
+      console.log("Saída: false (divisível por", i, "ou", i + 2, ")");
+      return false;
+    }
+  }
+  
+  console.log("Saída: true (é primo)");
   return true;
 }
 
-// Exemplo de uso
-const numero = 11;
-const ehPrimo = isPrime(numero);
-console.log(ehPrimo); // Saída: true
-}`,
+verificarPrimo(11);`,
     explanation:
-      "Esta solução implementa um algoritmo eficiente para verificar números primos, testando divisibilidade apenas até a raiz quadrada do número.",
+      "Esta solução implementa um algoritmo otimizado para verificar números primos. Em vez de testar todos os números, ela usa várias otimizações: verifica casos especiais (números ≤ 3), elimina múltiplos de 2 e 3, e depois testa apenas números da forma 6k ± 1 até a raiz quadrada do número.",
+    conceptsUsed: [
+      {
+        title: "Otimização Matemática",
+        description:
+          "Usa propriedades dos números primos para reduzir a quantidade de verificações necessárias"
+      },
+      {
+        title: "Casos Base",
+        description:
+          "Trata casos especiais (números ≤ 3) separadamente para otimizar o algoritmo"
+      },
+      {
+        title: "Loop Otimizado",
+        description:
+          "Verifica apenas números da forma 6k ± 1, pois todos os outros já foram eliminados"
+      }
+    ],
     testCases: [
       { input: [11], output: true },
       { input: [4], output: false },
       { input: [2], output: true },
-      { input: [1], output: false },
-      { input: [17], output: true }
+      { input: [1], output: false }
     ]
   },
   {
@@ -139,24 +161,41 @@ console.log(ehPrimo); // Saída: true
   // Seu código aqui
   
 }`,
-    solution: `function factorial(n: number): number {
-  if (n === 0 || n === 1) return 1;
+    solution: `function calcularFatorial(numero) {
+  console.log("Entrada:", numero);
+  
+  if (numero === 0 || numero === 1) {
+    console.log("Saída:", 1);
+    return 1;
+  }
   
   let resultado = 1;
-  for (let i = 2; i <= n; i++) {
+  for (let i = 2; i <= numero; i++) {
     resultado *= i;
   }
   
+  console.log("Saída:", resultado);
   return resultado;
 }
 
-// Exemplo de uso
-const numero = 5;
-const fatorial = factorial(numero);
-console.log(fatorial); // Saída: 120
-}`,
+calcularFatorial(5);`,
     explanation:
-      "Esta solução calcula o fatorial usando um loop iterativo, que é mais eficiente que uma solução recursiva para números grandes.",
+      "Esta solução calcula o fatorial usando um loop iterativo, que é mais eficiente que uma solução recursiva para números grandes. O algoritmo multiplica todos os números de 2 até n, considerando que o fatorial de 0 e 1 é 1.",
+    conceptsUsed: [
+      {
+        title: "Casos Base",
+        description: "Trata os casos especiais de 0! e 1! que são iguais a 1"
+      },
+      {
+        title: "Loop Iterativo",
+        description:
+          "Usa um loop para multiplicar sequencialmente os números de 2 até n"
+      },
+      {
+        title: "Acumulador",
+        description: "Usa uma variável para acumular o produto dos números"
+      }
+    ],
     testCases: [
       { input: [5], output: 120 },
       { input: [0], output: 1 },

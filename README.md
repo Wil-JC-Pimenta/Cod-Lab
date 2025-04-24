@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+# 🚀 Code Lab Challenges
 
-## Project info
+Um projeto educacional interativo focado em desafios de programação, implementando soluções para diversos algoritmos e estruturas de dados.
 
-**URL**: https://lovable.dev/projects/80cf8882-c66a-4e07-bbc8-28dd0e1908d4
+## 📋 Sobre o Projeto
 
-## How can I edit this code?
+Este projeto foi desenvolvido para fornecer uma plataforma de aprendizado interativa onde desenvolvedores podem praticar e aprender diferentes conceitos de programação através de desafios práticos.
 
-There are several ways of editing your application.
+### ✨ Características
 
-**Use Lovable**
+- 💻 Interface moderna e responsiva
+- 🌙 Tema escuro elegante
+- 📝 Exemplos de código com syntax highlighting
+- 🔍 Explicações detalhadas das soluções
+- 📚 Categorias diversas de desafios
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/80cf8882-c66a-4e07-bbc8-28dd0e1908d4) and start prompting.
+## 🛠️ Tecnologias Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset JavaScript com tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário
+- **Lucide React** - Ícones modernos e customizáveis
+- **Shadcn/ui** - Componentes React reutilizáveis
 
-**Use your preferred IDE**
+## 🚀 Como Executar
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone o repositório:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+git clone https://github.com/seu-usuario/code-lab-challenges.git
+```
 
-Follow these steps:
+2. Instale as dependências:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+cd code-lab-challenges
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. Execute o projeto:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Acesse `http://localhost:3000` no seu navegador
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📂 Estrutura do Projeto
 
-**Use GitHub Codespaces**
+```
+code-lab-challenges/
+├── src/
+│   ├── components/     # Componentes React reutilizáveis
+│   ├── pages/         # Páginas da aplicação
+│   ├── styles/        # Arquivos de estilo
+│   ├── data/         # Dados dos desafios
+│   └── lib/          # Utilitários e configurações
+├── public/           # Arquivos estáticos
+└── ...
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎯 Categorias de Desafios
 
-## What technologies are used for this project?
+- **Manipulação de Strings**
+- **Operações com Arrays**
+- **Desafios Matemáticos**
+- **Algoritmos Avançados**
 
-This project is built with:
+## 🤝 Contribuindo
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contribuições são sempre bem-vindas! Sinta-se à vontade para:
 
-## How can I deploy this project?
+1. Fazer um fork do projeto
+2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abrir um Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/80cf8882-c66a-4e07-bbc8-28dd0e1908d4) and click on Share -> Publish.
+## 📝 Licença
 
-## Can I connect a custom domain to my Lovable project?
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-Yes, you can!
+## 👨‍💻 Autor
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Wilker J C Pimenta**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/Wil-JC-Pimenta)
+
+---
+
+⭐️ Se este projeto te ajudou, considere dar uma estrela!

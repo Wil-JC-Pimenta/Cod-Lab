@@ -1,0 +1,104 @@
+/* Estilos base para o syntax highlighting */
+pre {
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+
+/* Cores para diferentes elementos de código */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955;
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6;
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d16969;
+}
+
+/* Estilos para o botão de copiar */
+.copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+pre:hover .copy-button {
+  opacity: 1;
+}
+
+/* Estilos para scrollbar */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}

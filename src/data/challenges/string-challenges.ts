@@ -145,21 +145,15 @@ console.log("Saída", resultado2);`,
   
 }`,
     solution: `function countVowels(str) {
-  // Converte a string para minúsculas para facilitar a comparação
+  console.log("Entrada:", str);
   const strLower = str.toLowerCase();
-  
-  // Usa expressão regular para encontrar todas as vogais
   const matches = strLower.match(/[aeiou]/g);
-  
-  // Retorna o número de vogais encontradas ou 0 se não houver nenhuma
-  return matches ? matches.length : 0;
+  const result = matches ? matches.length : 0;
+  console.log("Saída:", result);
+  return result;
 }
 
-// Exemplo de uso
-const texto = 'Hello World';
-const quantidade = countVowels(texto);
-console.log(quantidade); // Saída: 3 (e, o, o)
-`,
+countVowels("hello");`,
     explanation:
       "Esta solução usa expressões regulares para encontrar todas as vogais na string de forma eficiente. Primeiro converte a string para minúsculas para garantir que todas as vogais sejam encontradas, independente de estarem em maiúsculas ou minúsculas.",
     conceptsUsed: [
@@ -184,6 +178,82 @@ console.log(quantidade); // Saída: 3 (e, o, o)
       { input: ["programming"], output: 3 },
       { input: ["aeiou"], output: 5 },
       { input: ["xyz"], output: 0 }
+    ]
+  },
+  {
+    id: "valid-parentheses",
+    name: "Validador de Parênteses",
+    description:
+      "Crie uma função que verifica se uma string contendo apenas parênteses '(', ')', '{', '}', '[' e ']' é válida. A string é válida se todos os parênteses são fechados na ordem correta.",
+    difficulty: "medium",
+    tags: ["string", "pilha", "validação"],
+    examples: [
+      {
+        input: "'{[()]}'",
+        output: "true",
+        explanation: "Todos os parênteses são fechados na ordem correta."
+      },
+      {
+        input: "'([)]'",
+        output: "false",
+        explanation: "Os parênteses não são fechados na ordem correta."
+      }
+    ],
+    boilerplate: `function validParentheses(str: string): boolean {
+  // Seu código aqui
+  
+}`,
+    solution: `function validarParenteses(texto) {
+  console.log("Entrada:", texto);
+  
+  const pilha = [];
+  const pares = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  };
+  
+  for (const caractere of texto) {
+    if (pares[caractere]) {
+      pilha.push(caractere);
+    } else if (Object.values(pares).includes(caractere)) {
+      if (pilha.length === 0 || pares[pilha.pop()] !== caractere) {
+        console.log("Saída: false");
+        return false;
+      }
+    }
+  }
+  
+  const resultado = pilha.length === 0;
+  console.log("Saída:", resultado);
+  return resultado;
+}
+
+validarParenteses("{[()]}");`,
+    explanation:
+      "Esta solução usa uma pilha para rastrear parênteses abertos e verifica se cada parêntese fechado corresponde ao último parêntese aberto. A pilha garante que os parênteses sejam fechados na ordem correta.",
+    conceptsUsed: [
+      {
+        title: "Pilha (Stack)",
+        description:
+          "Estrutura de dados que segue o princípio LIFO (Last In, First Out) para rastrear parênteses abertos"
+      },
+      {
+        title: "Objeto de Mapeamento",
+        description:
+          "Usa um objeto para mapear cada tipo de parêntese de abertura ao seu respectivo fechamento"
+      },
+      {
+        title: "Iteração de String",
+        description:
+          "Percorre cada caractere da string para verificar parênteses de abertura e fechamento"
+      }
+    ],
+    testCases: [
+      { input: ["{[()]}"], output: true },
+      { input: ["([)]"], output: false },
+      { input: ["((()"], output: false },
+      { input: ["(){}[]"], output: true }
     ]
   }
 ];
