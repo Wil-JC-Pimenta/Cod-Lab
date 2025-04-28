@@ -4,13 +4,13 @@ Um projeto educacional interativo focado em desafios de programação, implement
 
 ## 📋 Sobre o Projeto
 
-Este projeto foi desenvolvido para fornecer uma plataforma de aprendizado interativa onde desenvolvedores podem praticar e aprender diferentes conceitos de programação através de desafios práticos.
+Este projeto foi desenvolvido para fornecer uma plataforma de aprendizado interativa inspirada em modelos como freecodecamp onde desenvolvedores podem praticar e aprender diferentes conceitos de programação através de desafios práticos.
 
 ### ✨ Características
 
 - 💻 Interface moderna e responsiva
 - 🌙 Tema escuro elegante
-- 📝 Exemplos de código com syntax highlighting
+- 📝 Exemplos de código 
 - 🔍 Explicações detalhadas das soluções
 - 📚 Categorias diversas de desafios
 
